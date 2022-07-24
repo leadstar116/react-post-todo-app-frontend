@@ -1,0 +1,18 @@
+.signUpPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signUpBox {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 40px;
+  width: 500px;
+}
+
+.signUpBox .actionButton {
+  margin: 20px 0 0 0;
+}
