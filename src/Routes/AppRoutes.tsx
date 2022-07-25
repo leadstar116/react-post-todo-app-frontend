@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { PrivateRoute } from "./PrivateRoute";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
+import Homepage from "../pages/Homepage/Homepage";
 
 const AppRoutes = () => {
   return (
@@ -11,7 +12,7 @@ const AppRoutes = () => {
         path="/"
         element={
           <PrivateRoute>
-            <div>Logged In</div>
+            <Homepage />
           </PrivateRoute>
         }
       />

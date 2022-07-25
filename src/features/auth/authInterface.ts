@@ -1,7 +1,6 @@
 export interface IAuthState {
   isLoggedIn: boolean;
   token: string;
-  status: "idle" | "loading" | "failed" | "registering";
 }
 
 export interface IAuthParameters {

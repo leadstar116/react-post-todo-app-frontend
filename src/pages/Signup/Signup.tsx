@@ -3,20 +3,26 @@ import { useNavigate } from "react-router-dom";
 import { Box, Button, TextField } from "@mui/material";
 import styles from "./Signup.module.css";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import {
-  registerAsync,
-  selectIsRegistering,
-  selectLoggedInStatus,
-} from "../../features/auth/authSlice";
+import { selectLoggedInStatus } from "../../features/auth/authSlice";
 import CircularProgressBar from "../../shared/components/CircularProgressBar/CircularProgressBar";
+import { useRegisterMutation } from "../../app/services/auth";
+import { newAlert } from "../../features/alert/alertSlice";
 
 export default function SignUp() {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const isLoggedIn = useAppSelector(selectLoggedInStatus);
-  const isRegistering = useAppSelector(selectIsRegistering);
+  const [register, { isLoading, error }] = useRegisterMutation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    if (error) {
+      dispatch(
+        newAlert({ message: (error as any).data.message, type: "error" })
+      );
+    }
+  }, [error, dispatch]);
 
   useEffect(() => {
     if (isLoggedIn) {
@@ -27,8 +33,8 @@ export default function SignUp() {
   const handleLogin = () => {
     navigate("/login");
   };
-  const handleSignup = () => {
-    dispatch(registerAsync({ email, password }));
+  const handleSignup = async () => {
+    await register({ email, password });
   };
 
   return (
@@ -53,10 +59,10 @@ export default function SignUp() {
           variant="contained"
           color="secondary"
           className={styles.actionButton}
-          disabled={isRegistering}
+          disabled={isLoading}
           onClick={handleSignup}
         >
-          {isRegistering ? <CircularProgressBar /> : "Register"}
+          {isLoading ? <CircularProgressBar /> : "Register"}
         </Button>
         <Button
           variant="contained"
