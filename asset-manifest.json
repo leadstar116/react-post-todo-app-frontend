@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-post-todo-app-frontend/static/css/main.a7e2fde4.css",
+    "main.js": "/react-post-todo-app-frontend/static/js/main.b9587cbd.js",
+    "static/js/787.cda612ba.chunk.js": "/react-post-todo-app-frontend/static/js/787.cda612ba.chunk.js",
+    "index.html": "/react-post-todo-app-frontend/index.html",
+    "main.a7e2fde4.css.map": "/react-post-todo-app-frontend/static/css/main.a7e2fde4.css.map",
+    "main.b9587cbd.js.map": "/react-post-todo-app-frontend/static/js/main.b9587cbd.js.map",
+    "787.cda612ba.chunk.js.map": "/react-post-todo-app-frontend/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7e2fde4.css",
+    "static/js/main.b9587cbd.js"
+  ]
+}
