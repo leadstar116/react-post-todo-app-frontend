@@ -1,3 +1,34 @@
+# React Posts Todo App
+
+Simple React Todo App which is performing authentication and CRUD actions with backend server.
+
+You can check backend code here: https://github.com/leadstar116/nestjs-post-todo-app-backend
+
+Live Url: https://react-posts-todo-frontend.herokuapp.com/
+
+## Used Stacks
+
+- React
+- Redux
+- Redux-Toolkit
+- Typescript
+- Material UI
+- JWT Authentication
+- Webpack
+- Unit Testing
+- Snapshot Testing
+- Heroku Deployment
+
+## Main Functionalities of App
+
+### Login / Signup Page
+
+You can login/register using email and password.
+
+### Homepage
+
+You can see all posts you have created and also read/create/update/delete for individual post.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
@@ -7,6 +38,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### `npm start`
+
+Runs the app in the production mode. You need to run `build` first to generate production built files.
+
+### `npm run dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
