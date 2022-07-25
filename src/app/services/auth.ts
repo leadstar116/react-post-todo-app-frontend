@@ -13,7 +13,7 @@ export const authApi = api.injectEndpoints({
         method: "POST",
         body: credentials,
       }),
-      invalidatesTags: ["Auth"],
+      invalidatesTags: ["Auth", "Posts"],
     }),
     register: build.mutation<{ token: string }, any>({
       query: (credentials: IUserCredentials) => ({
@@ -21,7 +21,7 @@ export const authApi = api.injectEndpoints({
         method: "POST",
         body: credentials,
       }),
-      invalidatesTags: ["Auth"],
+      invalidatesTags: ["Auth", "Posts"],
     }),
   }),
 });

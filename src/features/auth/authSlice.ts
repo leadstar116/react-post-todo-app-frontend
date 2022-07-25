@@ -29,6 +29,20 @@ export const authSlice = createSlice({
       })
       .addMatcher(authApi.endpoints.login.matchRejected, (state, action) => {
         console.log("rejected", action);
+      })
+      .addMatcher(authApi.endpoints.register.matchPending, (state, action) => {
+        console.log("pending", action);
+      })
+      .addMatcher(
+        authApi.endpoints.register.matchFulfilled,
+        (state, action) => {
+          console.log("fulfilled", action);
+          state.token = action.payload.token;
+          state.isLoggedIn = true;
+        }
+      )
+      .addMatcher(authApi.endpoints.register.matchRejected, (state, action) => {
+        console.log("rejected", action);
       });
   },
 });
