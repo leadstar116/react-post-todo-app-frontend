@@ -1,0 +1,11 @@
+.post {
+  padding: 10px 0;
+  cursor: pointer;
+  border-top: 1px solid #ccc;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

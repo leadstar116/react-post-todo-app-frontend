@@ -1,0 +1,12 @@
+.newPostForm {
+  background-color: #fff;
+  padding: 20px 40px;
+  width: 500px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+button.addNewPostBtn {
+  margin-top: 20px;
+}
