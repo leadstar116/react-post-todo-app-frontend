@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./App.css";
 import { useAppDispatch, useAppSelector } from "./app/hooks";
 import { clearAlert, selectAlertInfo } from "./features/alert/alertSlice";
-import AppRoutes from "./Routes/AppRoutes";
+import AppRoutes from "./routes/AppRoutes";
 import Alert from "./shared/components/Alert/Alert";
 
 function App() {
